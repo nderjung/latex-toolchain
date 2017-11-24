@@ -1,5 +1,5 @@
 CONTAINER_NAME=a1exanderjung/latex-toolchain
-CONTAINER_VERSION=0.1.0
+CONTAINER_VERSION=0.1.1
 DOCKER=docker
 
 .PHONY: container

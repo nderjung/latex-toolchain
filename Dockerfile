@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     biber \
     make \
     git \
+    xterm \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
@@ -17,6 +18,4 @@ RUN cd /app/latex-makefile && ./build && mv /app/latex-makefile/Makefile /app
 
 WORKDIR /workspace
 VOLUME /workspace
-ADD run.sh /app
-
-ENTRYPOINT ["/app/run.sh"]
+ADD build /usr/local/bin
